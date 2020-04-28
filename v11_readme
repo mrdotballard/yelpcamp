@@ -1,0 +1,34 @@
+*******
+* sudo lsof -i:27017 (port num connected to DB, app.js ln: 22)
+* sudo kill -9 [pid]
+*******
+
+
+v11
+add flash messages for user info
+using flash library and boot strao
+
+
+--------------------------------
+
+v10
+Authorization to delete or update
+Added to edit, update and delete routes
+Authorization for comments
+Add edit route for comment, add button for comment.
+Add update route to update database
+Add delete route and button.
+
+Add Authorization for users (add, edit, delete)
+Hide buttons to only creating user.
+Own edit was to allow username 'admin' to see all options.
+
+--------------------------------
+
+v9
+Add edit/update and destroy/delete functionality.
+
+--------------------------------
+
+v7
+refactor and split out each route (index - auth, comments, campgrounds)
