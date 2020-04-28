@@ -56,4 +56,4 @@ app.use("/", indexRoutes);
 app.use("/campgrounds", campgroundRoutes);
 app.use("/campgrounds/:id/comments", commentRoutes);
 
-app.listen(12152, () => { console.log("Server running localhost:3000....v10") });
+app.listen(process.env.PORT, () => { console.log("Server running localhost:3000....v10") });
