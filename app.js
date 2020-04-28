@@ -19,8 +19,9 @@ var commentRoutes = require('./routes/comments'),
 
 var app = express();
 
+mongoose.connect(process.env.DATABASEURL, { useUnifiedTopology: true, useNewUrlParser: true });
 // mongoose.connect("mongodb://localhost:27017/yelp_camp_v6", { useUnifiedTopology: true, useNewUrlParser: true });
-mongoose.connect("mongodb+srv://matt:mattadmin@yelpcamp-j3ogj.mongodb.net/test?retryWrites=true&w=majority", { useUnifiedTopology: true, useNewUrlParser: true });
+// mongoose.connect("mongodb+srv://matt:mattadmin@yelpcamp-j3ogj.mongodb.net/test?retryWrites=true&w=majority", { useUnifiedTopology: true, useNewUrlParser: true });
 app.set("view engine", "ejs"); //causes "res.render" to always look in /views folder
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(__dirname + "/public"));
@@ -56,4 +57,4 @@ app.use("/", indexRoutes);
 app.use("/campgrounds", campgroundRoutes);
 app.use("/campgrounds/:id/comments", commentRoutes);
 
-app.listen(process.env.PORT, () => { console.log("Server running localhost:3000....v10") });
+app.listen(process.env.PORT, () => { console.log("Server running localhost:" + process.env.PORT+"...V13_deploy") });
