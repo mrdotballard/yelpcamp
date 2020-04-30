@@ -14,3 +14,11 @@
   display: inline;
   padding-left: 5px;
 }
+
+.login-form {
+  width: 40%;
+  margin: 10vh auto;
+  border: 1px lightblue solid;
+  border-radius: 10px;
+  background: rgba(51, 122, 183, 0.09);
+}
